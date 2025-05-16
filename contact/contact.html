@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChemEdu | Interactive Chemistry Learning</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
+  <link rel="shortcut icon" href="../media/images/favicon.ico"> <!-- For older browsers -->
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">Chem<span>Edu</span></a>
+        
+        <!-- Hamburger Button -->
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../courses/courses.html">Courses</a></li>
+            <li><a href="../periodic-table/periodic-table.html">Periodic Table</a></li>
+            <li><a href="../games/games.html">Fun Games</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section id="contact" class="full-screen contact">
+  <div class="section-container">
+      <h2 style="color: white;" class="section-title">Contact Us</h2>
+      <div class="contact-content">
+          <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <select name="subject" required>
+                  <option value="">Select Subject</option>
+                  <option>Course Inquiry</option>
+                  <option>Technical Support</option>
+                  <option>General Question</option>
+              </select>
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit" class="btn primary" id="submitBtn">Send Message</button>
+              <div id="formStatus" style="margin-top: 10px;"></div>
+          </form>
+          <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><strong>Email:</strong> zainurrifaim@thursinaiibs.sch.id</p>
+              <p><strong>Phone:</strong> (+62) 341 463838</p>
+              <p><strong>Address:</strong> Thursina Education Hill - Jalan Tirto Sentono 15 A, Landungsari, Dau, Malang, Indonesia 65151</p>
+              <div class="social-links">
+                  <a href="https://twitter.com/zainurrifaim">Twitter</a>
+                  <a href="https://github.com/zainurrifaim">Github</a>
+                  <a href="https://linkedin.com/in/zainurrifaim">LinkedIn</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">Chem<span>Edu</span></div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#periodic">Periodic Table</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Study Guides</a></li>
+          <li><a href="#">Practice Problems</a></li>
+          <li><a href="#">Video Library</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about-us/about-us.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy; 2025 ChemEdu. All rights reserved.
+  </div>
+</footer>
+<script src="../index.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

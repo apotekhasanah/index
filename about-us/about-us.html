@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChemEdu | Interactive Chemistry Learning</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
+  <link rel="shortcut icon" href="../media/images/favicon.ico"> <!-- For older browsers -->
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color Variables */
+:root {
+    --primary: #db243b;        /* Vibrant red */
+    --secondary: #3c808b;      /* Teal */
+    --accent1: #e56a3a;        /* Orange */
+    --accent2: #c3df3a;        /* Lime green */
+    --accent3: #b274b9;        /* Purple */
+    --accent4: #c62f8d;        /* Pink */
+    --accent5: #813b28;        /* Brown */
+    --light: #e6e8e8;         /* Light background */
+    --dark: #0d0e0e;          /* Dark text */
+    --highlight: #b93210;      /* Darker red for highlights */
+    --success: #c3df3a;        /* Success states */
+    --warning: #e56a3a;        /* Warning states */
+    --danger: #db243b;         /* Danger/error states */
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Full width */
+    margin: 60px 0; /* Remove horizontal margin */
+    padding: 40px 20px; /* Increased vertical padding */
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.profile-image {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.profile-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.profile-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-text p {
+    font-size: 1.1rem;
+    color: var(--dark);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .profile-container {
+        flex-direction: row;
+        padding: 30px;
+    }
+    
+    .profile-text h2 {
+        text-align: left;
+    }
+    
+    .profile-text {
+        padding: 30px;
+    }
+}
+</style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">Chem<span>Edu</span></a>
+        
+        <!-- Hamburger Button -->
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../courses/courses.html">Courses</a></li>
+            <li><a href="../periodic-table/periodic-table.html">Periodic Table</a></li>
+            <li><a href="../games/games.html">Fun Games</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="profile-container">
+    <div class="profile-image">
+        <img src="../media/images/profile.png" alt="Profile Picture">
+    </div>
+    <div class="profile-text">
+        <h2>M. Zainur Rifai</h2>
+        <p>
+            I am an educator and researcher passionate about IT, Technopreneurship, and STEM education.
+            With expertise in Arduino, Python, and Web Development, I integrate technology into learning.
+        </p>
+        <p>
+            My research focuses on 3D Printing in STEM Education, and I have guided students in 
+            <strong>environmental and robotics projects</strong>.
+            This website showcases my work, courses, and public presentations.
+        </p>
+    </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">Chem<span>Edu</span></div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#periodic">Periodic Table</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Study Guides</a></li>
+            <li><a href="#">Practice Problems</a></li>
+            <li><a href="#">Video Library</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 ChemEdu. All rights reserved.
+    </div>
+  </footer>
+  <script src="../index.js"></script>
+</body>
+</html>
