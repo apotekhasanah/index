@@ -405,65 +405,107 @@ body {
    COURSES SECTION
    ================================================ */
 .courses {
-    background: var(--light);
+  background: var(--light);
+  padding: 60px 0; /* Ensure space above and below the section */
 }
 
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Grid container for the course cards */
 .course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
+/* Make the whole card clickable */
 .course-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
+/* Individual course card styling */
 .course-card {
-    background: white;
-    border-radius: 8px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .course-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Icon at the top of each card */
 .course-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0 auto 20px;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
 }
 
+/* Title inside card */
 .course-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary);
 }
 
+/* Description inside card */
 .course-card p {
-    color: var(--dark);
-    text-align: center;
+  color: var(--dark);
+  text-align: center;
 }
 
+/* Highlight span inside description */
 .course-card p span {
-    color: var(--highlight);
-    font-weight: bold;  /* Added bold styling */
+  color: var(--highlight);
+  font-weight: bold;
+}
+
+/* Hover effect for link wrapper */
+.course-card-link:hover .course-card {
+  background-color: var(--primary-light); /* Optional highlight */
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-top: 40px;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
 }
 
 /* ================================================
@@ -500,6 +542,7 @@ body {
 
 .element:hover {
     transform: scale(1.1);
+    background: var(--primary);
 }
 
 /* Element Color Classes */
@@ -515,6 +558,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+
 
 
 /* ================================================
