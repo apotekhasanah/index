@@ -179,7 +179,7 @@ body {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 4px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     transition: all 0.3s;
     text-align: center;
@@ -188,6 +188,9 @@ body {
 .btn.primary {
     background: var(--primary);
     color: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn.primary:hover {
@@ -500,15 +503,18 @@ body {
 }
 
 /* Element Color Classes */
-.lithium    { background: #544484; }
-.berrylium  { background: var(--secondary); }
-.boron      { background: #ec6823; }
-.carbon     { background: #909090; }
-.nitrogen   { background: var(--accent3); }
-.oxygen     { background: #FF0D0D; }
-.fluorine   { background: #90E050; }
-.neon       { background: #B3E3F5; }
+.blood    { background: #544484; }
+.glucose  { background: var(--secondary); }
+.calorie      { background: #ec6823; }
+.kolesterolasamurat     { background: #909090; }
 
+.table-preview a.element {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 /* ================================================

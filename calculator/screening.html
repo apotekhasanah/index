@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apotek Hasanah | Solusi Kesehatan Anda</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../chatbot/chatbot.css">
+  <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
+  <link rel="shortcut icon" href="../media/images/favicon.ico"> <!-- For older browsers -->
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">Apotek<span> Hasanah</span></a>
+        
+        <!-- Hamburger Button -->
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../artikel/artikel.html">Artikel</a></li>
+            <li><a href="#">Screening</a></li>
+            <li><a href="../layanan/layanan.html">Layanan</a></li>
+            <li><a href="../contact/contact.html">Kontak</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Periodic Table Section -->
+<section id="screening" class="full-screen periodic">
+  <div class="section-container">
+    <h2 class="section-title">Layanan Screening Kesehatan</h2>
+    <div class="table-preview">
+      <a href="blood.html" class="element blood">Tekanan Darah</a>
+      <a href="glucose.html" class="element glucose">Gula Darah</a>
+      <a href="calorie.html" class="element calorie">Kalori</a>
+      <a href="cholesterol-uric.html" class="element kolesterolasamurat">Kolesterol-Asam Urat</a>
+    </div>
+    <a href="bmi.html" class="btn primary">Indeks Massa Tubuh</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">Apotek <span>Hasanah Rahayu</span></div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#artikel">Artikel Kesehatan</a></li>
+          <li><a href="#screening">Screening Kesehatan</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Layanan Unggulan</h4>
+        <ul>
+          <li><a href="#">Konsultasi Apoteker</a></li>
+          <li><a href="#">Cek Tekanan Darah</a></li>
+          <li><a href="#">Gula & Kolesterol</a></li>
+          <li><a href="#">Layanan Antar Obat</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Informasi</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy; 2025 Apotek Hasanah Rahayu. Semua Hak Dilindungi.
+  </div>
+</footer>
+
+  <!-- Chatbot Toggle Button -->
+<div class="chatbot-toggle-container">
+  <button id="chatbot-toggle" aria-label="Open chat">
+    <img src="../media/images/chatbot.png" alt="Chatbot" />
+  </button>
+</div>
+
+<!-- Chatbot Panel -->
+<div id="chatbot-panel">
+  <div id="chat-container">
+    <div class="chat-header">
+      <h2>AI Chatbot Assistant</h2>
+      <button id="close-chat" aria-label="Close chat">
+        <span class="close-icon"></span>
+      </button>
+    </div>
+    <div id="messages"></div>
+    <div id="typing-indicator" class="hidden">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <form id="chat-form">
+      <input type="text" id="chat-input" placeholder="Ask something..." required />
+      <button type="submit" id="send-btn">
+        <span class="send-icon"></span>
+      </button>
+    </form>
+  </div>
+</div>
+
+  <script src="../chatbot/chatbot.js"></script>
+
+  <script src="../index.js"></script>
+</body>
+</html>

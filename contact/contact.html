@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChemEdu | Interactive Chemistry Learning</title>
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../chatbot/chatbot.css">
   <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
   <link rel="shortcut icon" href="../media/images/favicon.ico"> <!-- For older browsers -->
 </head>
@@ -22,11 +23,11 @@
         </button>
         
         <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../courses/courses.html">Courses</a></li>
-            <li><a href="../periodic-table/periodic-table.html">Periodic Table</a></li>
-            <li><a href="../games/games.html">Fun Games</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../artikel/artikel.html">Artikel</a></li>
+            <li><a href="../calculator/screening.html">Screening</a></li>
+            <li><a href="../layanan/layanan.html">Layanan</a></li>
+            <li><a href="#">Kontak</a></li>
         </ul>
     </div>
 </nav>
@@ -98,6 +99,39 @@
     &copy; 2025 ChemEdu. All rights reserved.
   </div>
 </footer>
+
+  <!-- Chatbot Toggle Button -->
+<div class="chatbot-toggle-container">
+  <button id="chatbot-toggle" aria-label="Open chat">
+    <img src="../media/images/chatbot.png" alt="Chatbot" />
+  </button>
+</div>
+
+<!-- Chatbot Panel -->
+<div id="chatbot-panel">
+  <div id="chat-container">
+    <div class="chat-header">
+      <h2>AI Chatbot Assistant</h2>
+      <button id="close-chat" aria-label="Close chat">
+        <span class="close-icon"></span>
+      </button>
+    </div>
+    <div id="messages"></div>
+    <div id="typing-indicator" class="hidden">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <form id="chat-form">
+      <input type="text" id="chat-input" placeholder="Ask something..." required />
+      <button type="submit" id="send-btn">
+        <span class="send-icon"></span>
+      </button>
+    </form>
+  </div>
+</div>
+
+  <script src="../chatbot/chatbot.js"></script>
 <script src="../index.js"></script>
 <script src="contact.js"></script>
 </body>

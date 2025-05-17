@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Pressure Category</title>
+  <link rel="stylesheet" href="calculator.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot/chatbot.css">
+  <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
+  <link rel="shortcut icon" href="../media/images/favicon.ico"> <!-- For older browsers -->
+</head>
+<body>
+      <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">Apotek<span> Hasanah</span></a>
+        
+        <!-- Hamburger Button -->
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../artikel/artikel.html">Artikel</a></li>
+            <li><a href="screening.html">Screening</a></li>
+            <li><a href="../layanan/layanan.html">Layanan</a></li>
+            <li><a href="../contact/contact.html">Kontak</a></li>
+        </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <h1>Blood Pressure Category</h1>
+    <form id="bpForm">
+      <div class="input-group">
+        <label for="systolic">Systolic (mmHg):</label>
+        <input type="number" id="systolic" required />
+      </div>
+      <div class="input-group">
+        <label for="diastolic">Diastolic (mmHg):</label>
+        <input type="number" id="diastolic" required />
+      </div>
+      <button type="submit">Check Category</button>
+      <div class="result-box" id="bpResult"></div>
+    </form>
+  </div>
+  
+  <!-- Chatbot Toggle Button -->
+<div class="chatbot-toggle-container">
+  <button id="chatbot-toggle" aria-label="Open chat">
+    <img src="../media/images/chatbot.png" alt="Chatbot" />
+  </button>
+</div>
+
+<!-- Chatbot Panel -->
+<div id="chatbot-panel">
+  <div id="chat-container">
+    <div class="chat-header">
+      <h2>AI Chatbot Assistant</h2>
+      <button id="close-chat" aria-label="Close chat">
+        <span class="close-icon"></span>
+      </button>
+    </div>
+    <div id="messages"></div>
+    <div id="typing-indicator" class="hidden">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <form id="chat-form">
+      <input type="text" id="chat-input" placeholder="Ask something..." required />
+      <button type="submit" id="send-btn">
+        <span class="send-icon"></span>
+      </button>
+    </form>
+  </div>
+</div>
+
+  <script src="../chatbot/chatbot.js"></script>
+  <script src="../index.js"></script>
+  <script>
+    document.getElementById("bpForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const systolic = parseInt(document.getElementById("systolic").value);
+      const diastolic = parseInt(document.getElementById("diastolic").value);
+      let category = "";
+      if (systolic < 120 && diastolic < 80) category = "Normal";
+      else if (systolic < 130 && diastolic < 80) category = "Elevated";
+      else if ((systolic < 140) || (diastolic < 90)) category = "High Blood Pressure (Stage 1)";
+      else if ((systolic >= 140) || (diastolic >= 90)) category = "High Blood Pressure (Stage 2)";
+      else category = "Consult your doctor";
+      document.getElementById("bpResult").innerHTML = `<strong>Category:</strong> ${category}`;
+    });
+  </script>
+</body>
+</html>

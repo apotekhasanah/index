@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BMI Calculator - Pharmacy</title>
-  <link rel="stylesheet" href="bmi.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+  <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../chatbot/chatbot.css">
-  <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
+  <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
   <link rel="shortcut icon" href="../media/images/favicon.ico"> <!-- For older browsers -->
 </head>
 <body>
-  
     <!-- Navigation -->
-    <nav class="navbar">
+  <nav class="navbar">
     <div class="nav-container">
         <a href="#" class="logo">Apotek<span> Hasanah</span></a>
         
@@ -26,47 +25,44 @@
         
         <ul class="nav-links">
             <li><a href="../index.html">Beranda</a></li>
-            <li><a href="../index.html">Artikel</a></li>
-            <li><a href="#">Screening</a></li>
-            <li><a href="../index.html">Layanan</a></li>
-            <li><a href="../index.html">Kontak</a></li>
+            <li><a href="../artikel/artikel.html">Artikel</a></li>
+            <li><a href="screening.html">Screening</a></li>
+            <li><a href="../layanan/layanan.html">Layanan</a></li>
+            <li><a href="../contact/contact.html">Kontak</a></li>
         </ul>
     </div>
-    </nav>
-  
-    <div class="container">
+  </nav>
+
+
+  <div class="container">
     <h1>BMI Calculator</h1>
     <form id="bmiForm">
       <div class="input-group">
-        <label for="gender">Gender:</label>
-        <select id="gender" required>
+        <label for="bmi-gender">Gender:</label>
+        <select id="bmi-gender" required>
           <option value="">Select</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
       </div>
       <div class="input-group">
-        <label for="age">Age:</label>
-        <input type="number" id="age" min="1" required />
+        <label for="bmi-age">Age:</label>
+        <input type="number" id="bmi-age" required />
       </div>
       <div class="input-group">
-        <label for="height">Height (cm):</label>
-        <input type="number" id="height" min="50" required />
+        <label for="bmi-height">Height (cm):</label>
+        <input type="number" id="bmi-height" required />
       </div>
       <div class="input-group">
-        <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" min="10" required />
+        <label for="bmi-weight">Weight (kg):</label>
+        <input type="number" id="bmi-weight" required />
       </div>
-      <button type="submit">Calculate BMI</button>
+      <button type="submit">Calculate</button>
+      <div class="result-box" id="bmiResult"></div>
     </form>
-
-    <div id="result" class="result-box">
-      <p><strong>Your BMI:</strong> <span id="bmiValue">-</span></p>
-      <p><strong>Category:</strong> <span id="bmiCategory">-</span></p>
-    </div>
   </div>
 
-  <!-- Chatbot Toggle Button -->
+    <!-- Chatbot Toggle Button -->
 <div class="chatbot-toggle-container">
   <button id="chatbot-toggle" aria-label="Open chat">
     <img src="../media/images/chatbot.png" alt="Chatbot" />
@@ -98,6 +94,20 @@
 </div>
 
   <script src="../chatbot/chatbot.js"></script>
-  <script src="bmi.js"></script>
+  <script src="../index.js"></script>
+  <script>
+    document.getElementById("bmiForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const weight = parseFloat(document.getElementById("bmi-weight").value);
+      const height = parseFloat(document.getElementById("bmi-height").value) / 100;
+      const bmi = weight / (height * height);
+      let status = "";
+      if (bmi < 18.5) status = "Underweight";
+      else if (bmi < 24.9) status = "Normal weight";
+      else if (bmi < 29.9) status = "Overweight";
+      else status = "Obese";
+      document.getElementById("bmiResult").innerHTML = `<strong>Your BMI:</strong> ${bmi.toFixed(2)} (${status})`;
+    });
+  </script>
 </body>
 </html>
