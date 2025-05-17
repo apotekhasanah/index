@@ -478,7 +478,7 @@ body {
 
 .table-preview {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     max-width: fit-content;
     max-height: fit-content;
@@ -894,7 +894,7 @@ body {
    ====================== */
 @media (max-width: 992px) {
     .table-preview {
-        grid-template-columns: repeat(8, 1fr); /* Reduced from 12 columns */
+        grid-template-columns: repeat(4, 1fr); /* Reduced from 12 columns */
     }
     
     .element {
@@ -912,7 +912,7 @@ body {
 
 @media (max-width: 768px) {
     .table-preview {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -1187,7 +1187,7 @@ body {
 /* Additional tablet size break for larger tablets */
 @media (min-width: 993px) and (max-width: 1024px) {
     .table-preview {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     
     .course-grid {
