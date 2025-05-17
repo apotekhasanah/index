@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Artikel Kesehatan - Apotek Hasanah Rahayu</title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>Manfaat Vitamin D</title>
   <link rel="stylesheet" href="article.css" />
+  <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../chatbot/chatbot.css">
   <link rel="icon" type="image/png" href="../media/images/icon.png"> <!-- For modern browsers -->
   <link rel="shortcut icon" href="../media/images/favicon.ico"> <!-- For older browsers -->
+
 </head>
 <body>
-  
-    <!-- Navigation -->
+
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
         <a href="#" class="logo">Apotek<span> Hasanah</span></a>
@@ -26,46 +27,48 @@
         
         <ul class="nav-links">
             <li><a href="../index.html">Beranda</a></li>
-            <li><a href="#">Artikel</a></li>
+            <li><a href="full-article.html">Artikel</a></li>
             <li><a href="../calculator/screening.html">Screening</a></li>
-            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#">Layanan</a></li>
             <li><a href="../contact/contact.html">Kontak</a></li>
         </ul>
     </div>
 </nav>
-  
-    <div class="container">
-    <h1>Artikel Kesehatan</h1>
 
-    <div class="article-list">
+  <!-- Article Section -->
+  <div class="article-banner" style="background-image: url('../media/images/hero.png');">
+    <div class="article-content">
+      <h1>Manfaat Vitamin D untuk Imunitas</h1>
+      <p>Rahasia Manfaat Vitamin D</p>
+    </div>
+  </div>
 
-      <div class="article-item">
-        <img src="media/article1.jpg" alt="Vitamin D" class="article-image" />
-        <div class="article-content">
-          <h2>📰 Manfaat Vitamin D</h2>
-          <p>Vitamin D sangat penting untuk kesehatan tulang dan sistem kekebalan tubuh.</p>
-          <a href="article1.html">Baca Selengkapnya →</a>
-        </div>
-      </div>
+  <!-- Article Content -->
+  <div class="container">
+    <h1>Manfaat Vitamin D untuk Imunitas</h1>
+    <h3 class="subheading">Bagaimana Vitamin D Membantu Tubuh Kita Melawan Infeksi</h3>
 
-      <div class="article-item">
-        <img src="../images/garam.jpg" alt="Garam" class="article-image" />
-        <div class="article-content">
-          <h2>🧂 Bahaya Konsumsi Garam Berlebih</h2>
-          <p>Konsumsi garam berlebihan dapat meningkatkan risiko tekanan darah tinggi dan penyakit jantung.</p>
-          <a href="article2.html">Baca Selengkapnya →</a>
-        </div>
-      </div>
+    <p>
+      Vitamin D sangat penting dalam menjaga kesehatan sistem kekebalan tubuh. Nutrisi ini membantu tubuh memproduksi protein yang melawan bakteri dan virus. 
+      Selain itu, vitamin D juga mendukung kesehatan tulang dan gigi melalui pengaturan kadar kalsium dalam darah.
+    </p>
 
-      <div class="article-item">
-        <img src="../images/darah.jpg" alt="Tekanan Darah" class="article-image" />
-        <div class="article-content">
-          <h2>🩸 Cara Menjaga Tekanan Darah Stabil</h2>
-          <p>Menjaga tekanan darah stabil penting untuk kesehatan jantung dan ginjal.</p>
-          <a href="article3.html">Baca Selengkapnya →</a>
-        </div>
-      </div>
+    <img src="../images/vitamin-d-sources.jpg" alt="Sumber Vitamin D" />
 
+    <p>
+      Sumber alami vitamin D meliputi sinar matahari, ikan berlemak seperti salmon dan tuna, serta susu yang diperkaya. 
+      Kekurangan vitamin D dapat meningkatkan risiko infeksi, kelelahan, dan osteoporosis pada jangka panjang.
+    </p>
+
+    <h3>Referensi</h3>
+    <ul>
+      <li>World Health Organization. “Vitamin D and Health.” 2020.</li>
+      <li>Harvard Health Publishing. “The Benefits of Vitamin D.” 2021.</li>
+    </ul>
+
+    <div class="article-nav">
+      <button class="btn" onclick="goToPreviousArticle('article2.html')">← Sebelumnya</button>
+      <button class="btn" onclick="goToNextArticle('article2.html')">Selanjutnya →</button>
     </div>
   </div>
 
@@ -77,11 +80,11 @@
       <div class="footer-column">
         <h4>Navigasi</h4>
         <ul>
-          <li><a href="#home">Beranda</a></li>
-          <li><a href="#artikel">Artikel Kesehatan</a></li>
-          <li><a href="#screening">Screening Kesehatan</a></li>
-          <li><a href="#layanan">Layanan</a></li>
-          <li><a href="#contact">Kontak</a></li>
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="full-article.html">Artikel</a></li>
+            <li><a href="../calculator/screening.html">Screening</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="../contact/contact.html">Kontak</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -144,5 +147,6 @@
 
   <script src="../index.js"></script>
 
+<script src="article.js" defer></script>
 </body>
 </html>
